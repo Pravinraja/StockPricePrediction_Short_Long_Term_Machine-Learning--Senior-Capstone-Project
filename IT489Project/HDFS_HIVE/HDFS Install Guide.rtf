@@ -1,0 +1,76 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red31\green31\blue31;\red255\green255\blue255;\red228\green238\blue252;
+\red239\green239\blue239;}
+{\*\expandedcolortbl;;\cssrgb\c16078\c16078\c16078;\cssrgb\c100000\c100000\c100000;\cssrgb\c91373\c94902\c99216;
+\cssrgb\c94902\c94902\c94902;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}.}{\leveltext\leveltemplateid1\'01.;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl720\partightenfactor0
+
+\f0\fs60 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Install HomeBrew\
+\pard\pardeftab720\sl640\partightenfactor0
+
+\fs42 \cf2 Copy the command at the top of the page and paste into a new terminal window. You will be notified of what will be installed. Pressing RETURN initiates the process:\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \cb4 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"\cb1 \
+\pard\pardeftab720\sl640\partightenfactor0
+
+\fs42 \cf2 \cb3 Confirm you have the correct version of java (version 8) on your machine. If it returns anything other than 1.8., be sure to install the correct version.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \cb5 $ java -version\cb1 \
+\cb5 $ brew cask install homebrew/cask-versions/adoptopenjdk8\cb1 \
+\pard\pardeftab720\sl720\partightenfactor0
+
+\fs60 \cf2 \cb3 Install Hadoop\
+\pard\pardeftab720\sl640\partightenfactor0
+
+\fs42 \cf2 Next, you will install the most current version of Hadoop at the path: /usr/local/Cellar/hadoop. This happens to be 3.2.1 at the time of the writing of this article:\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \cb5 $ brew install hadoop\cb1 \
+\pard\pardeftab720\sl720\partightenfactor0
+
+\fs60 \cf2 \cb3 Configure Hadoop\
+\pard\pardeftab720\sl640\partightenfactor0
+
+\fs42 \cf2 Configuring Hadoop will take place over a few steps. A more detailed version can be found in the\'a0{\field{\*\fldinst{HYPERLINK "https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html"}}{\fldrslt 
+\f1\b \ul Apache Hadoop documentation}}\'a0for setting up a single node cluster. (Be sure to follow along with the correct version installed on your machine.)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl640\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Updating the\'a0
+\f1\b environment variable settings
+\f0\b0 \cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Make changes to\'a0
+\f1\b core
+\f0\b0 -,\'a0
+\f1\b hdfs
+\f0\b0 -,\'a0
+\f1\b mapred
+\f0\b0 - and\'a0
+\f1\b yarn
+\f0\b0 -site.xml files\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Remove\'a0
+\f1\b password
+\f0\b0 \'a0requirement (if necessary)\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Format\'a0
+\f1\b NameNode
+\f0\b0 \cb1 \
+\pard\pardeftab720\sl640\partightenfactor0
+\cf2 \cb3 Open the document containing the environment variable settings :\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \cb5 $ cd /usr/local/cellar/hadoop/3.2.1/libexec/etc/hadoop\cb1 \
+\cb5 $ open hadoop-env.sh\cb1 \
+\pard\pardeftab720\sl640\partightenfactor0
+
+\fs42 \cf2 \cb3 Make the following changes to the document, save and za\
+}
